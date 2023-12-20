@@ -58,7 +58,7 @@ for (let i = 0; i < arrayimg.length; i++){
         </div>
     </div>`;
     thumbnailscontainer.innerHTML += 
-    `<div class="preview_img specialclass">
+    `<div class="preview_img">
         <div class="size_img">
             <img src="${arrayimg[i]['url']}">
         <div>
