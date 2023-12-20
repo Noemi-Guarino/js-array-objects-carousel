@@ -7,6 +7,8 @@
 // Aggiungere il ciclo infinito del carosello. Ovvero se la slide attiva è la prima e l'utente clicca la freccia verso destra, la slide che deve attivarsi sarà l'ultima e viceversa per l'ultima slide se l'utente clicca la freccia verso sinistra.
 
 let carouselcontainer = document.querySelector(".carousel_container");
+let thumbnailscontainer = document.querySelector(".thumbnailscontainer");
+
 
 
 const arrayimg = [
@@ -39,6 +41,8 @@ const arrayimg = [
     },
 ];
 
+
+// INIZIO ESERCIZIO BASE
 let active = 0;
 
 
@@ -53,7 +57,14 @@ for (let i = 0; i < arrayimg.length; i++){
             <p>${arrayimg[i]['description']}</p>
         </div>
     </div>`;
+    thumbnailscontainer.innerHTML += 
+    `<div class="preview_img specialclass">
+        <div class="size_img">
+            <img src="${arrayimg[i]['url']}">
+        <div>
+    </div>`;
 }
+
 
 let arrayClass = document.getElementsByClassName("specialclass");
 arrayClass[active].classList.add('active');
@@ -87,4 +98,4 @@ left.addEventListener("click", function(){
      arrayClass[active].classList.add('active');
 })
 
-
+// FINE ESERCIZIO BASE
